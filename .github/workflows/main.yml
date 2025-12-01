@@ -11,7 +11,7 @@ jobs:
        - name: Checkout code
          uses: actions/checkout@v4
 
-       - name: setup Node.js
+       - name: Setup Node.js
          uses: actions/setup-node@v4
          with:
              node-version: '18'
@@ -19,7 +19,7 @@ jobs:
          run: npm install
 
        - name: Build application
-         run:  echo"Building the application"
+         run: echo"Building the application"
 
   test:
     runs-on: ubuntu:latest
@@ -29,10 +29,10 @@ jobs:
          uses: actions/checkout@v4
          
        - name: Install dependencies
-         run:  npm install
+         run: npm install
 
        - name: Run tests
-         run:  npm test
+         run: npm test
 
  
   deploy:
@@ -42,8 +42,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy application
-        run:  echo"Deploying the application"
+      - name: Deploy the application
+        run: echo "Deploying the application..."
         
          
        
